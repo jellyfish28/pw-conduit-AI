@@ -7,9 +7,6 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "e2e": "playwright test",
-    "e2e:ui": "playwright test --ui",
-    "e2e:headed": "playwright test --headed",
     "lint": "ng lint --force",
     "prepare": "husky install"
   },
@@ -37,7 +34,6 @@
     "@angular-devkit/build-angular": "^18.0.0",
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "18.0.0",
-    "@playwright/test": "^1.62.0",
     "@types/jasmine": "~4.3.0",
     "@types/marked": "^6.0.0",
     "husky": "^8.0.3",
