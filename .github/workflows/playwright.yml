@@ -18,6 +18,10 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps --force
     - name: Run Playwright tests
+      env:
+        BASE_URL: ${{ secrets.BASE_URL }}
+        USER_EMAIL: ${{ secrets.USER_EMAIL }}
+        USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
       run: npx playwright test -g "User can create an article with direct XPath locators" --trace on --retries 1
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
