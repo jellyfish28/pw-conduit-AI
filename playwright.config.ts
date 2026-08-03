@@ -21,6 +21,12 @@ export default defineConfig({
     baseURL: process.env.BASE_URL,
     trace: "on-first-retry",
   },
+  webServer: {
+    command: "npm start",
+    url: process.env.BASE_URL,
+    reuseExistingServer: !isCI,
+    timeout: 120_000,
+  },
   projects: [
     {
       name: "auth-setup",
